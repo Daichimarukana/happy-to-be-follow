@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>フォローされると喜びます.com</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link id="PageStyleSheet" rel="stylesheet" href="style/style.css" />
+        <link rel="icon" type="image/png" href="fabicon/icon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="fabicon/icon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="fabicon/icon-96x96.png" sizes="96x96" />
+        <link rel="apple-touch-icon" sizes="57x57"   href="fabicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60"   href="fabicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72"   href="fabicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76"   href="fabicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="fabicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="fabicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="fabicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="fabicon/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="fabicon/apple-touch-icon-180x180.png" />
+
+        <script type="text/javascript">
+    window.onload = function onLoad() {
+
+      var params = new URLSearchParams(window.location.search);
+
+      var target = document.getElementById("custom");
+      if (params.has("c") == true) {
+        target.innerHTML = params.get("c");
+      } else {
+        target.innerHTML = "";
+      }
+
+      var target = document.getElementById("ulink");
+      if (params.has("u") == true) {
+        target.innerHTML = params.get("u");
+      } else {
+        target.innerHTML = "";
+      }
+
+
+
+      var urls = document.getElementById("ulink").innerText;
+
+        if(urls.indexOf('http') != -1){
+        } else {
+        }
+
+    
+if(urls.indexOf('twitter') != -1){
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style1.css";
+}else if(urls.indexOf('youtube') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style2.css";
+}else if(urls.indexOf('pixiv') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style3.css";
+}else if(urls.indexOf('nicovideo') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style4.css";
+}else if(urls.indexOf('github') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style5.css";
+}else if(urls.indexOf('discord') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style6.css";
+}else if(urls.indexOf('instagram') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style7.css";
+}else if(urls.indexOf('facebook') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style8.css";
+}else if(urls.indexOf('tiktok') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style9.css";
+}else if(urls.indexOf('mixi') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style10.css";
+}else if(urls.indexOf('pinterest') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style11.css";
+}else if(urls.indexOf('line') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style12.css";
+}else if(urls.indexOf('skype') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style13.css";
+}else if(urls.indexOf('whatsapp') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style14.css";
+}else if(urls.indexOf('linkedin') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style15.css";
+}else if(urls.indexOf('wechat') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style16.css";
+}else if(urls.indexOf('qq') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style17.css";
+}else if(urls.indexOf('telegram') != -1) {
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style18.css";
+}else{
+    var elem = document.getElementById("PageStyleSheet");
+      elem.href = "style/style.css";
+}
+
+nurl = urls.innerText
+
+    }
+
+
+    
+          </script>
+    </head>
+
+    <div class="Header">フォローされると喜びます.com</div>
+
+    <div class="dekamoji">フォローされると喜びます!!!</div>
+
+    <main>
+        <h1>フォローされると喜ぶのでフォローしてください!!!</h1>
+        <p id="custom"></p>
+        <p id="ulink"></p>
+        <a href="https://daichimarukana.com" class="foo">©2022 - 2023 Daichimaru</a>
+        <a href="info/index.html" class="foo">このサイトについて</a>
+    </main>
+
+
+</html>
+
