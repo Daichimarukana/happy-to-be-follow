@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>フォローされると喜びます.com</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link id="PageStyleSheet" rel="stylesheet" href="style/style.css" />
+        <link rel="icon" type="image/png" href="fabicon/icon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="fabicon/icon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="fabicon/icon-96x96.png" sizes="96x96" />
+        <link rel="apple-touch-icon" sizes="57x57"   href="fabicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60"   href="fabicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72"   href="fabicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76"   href="fabicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="fabicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="fabicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="fabicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="fabicon/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="fabicon/apple-touch-icon-180x180.png" />
+
+        <script type="text/javascript">
+        var fgt = ""
+        window.onload = function(){
+        document.getElementById("checkButton").onclick = function(){
+        var str1 = document.getElementById("url").value;
+        var str2 = document.getElementById("mes").value;
+        var str3 = document.getElementById("fc").value;
+        if(document.getElementById('snsck')){
+        id = document.getElementById('snsck').value;
+        if(id == 'sns'){
+          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/?c="+str2+"&u="+str1+"";
+        }else if(id == "switch" || id == "steam" || id == "xbox"){
+          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/fc?c="+str3+"&u="+id+"";
+        }else if(id == "thanks"){
+          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/thanks?c="+str2+"";
+        }
+        document.getElementById("result").innerHTML = str;
+        navigator.clipboard.writeText(str);
+
+        let text = document.getElementById('copys').innerHTML;
+        document.getElementById('copys').innerHTML = 'コピーしました';
+
+        if (str === undefined) {
+          alert("【1.】を選択して下さい。")
+        }
+        }
+      }}
+
+      
+
+
+
+function viewChange(){
+    if(document.getElementById('snsck')){
+        id = document.getElementById('snsck').value;
+        if(id == 'sns'){
+          let text = document.getElementById('Mes').innerHTML;
+          document.getElementById('Mes').innerHTML = '<p>送りたいメッセージを入力するのじゃ！</p><textarea type="text" name="mes" id="mes" class="textarea" maxlength="890" placeholder="フォローされると喜びます！"></textarea >';
+
+            document.getElementById('Link').style.display = "";//url
+            document.getElementById('Mes').style.display = "";//message
+            document.getElementById('FC').style.display = "none";//frend code
+        }
+        else if(id == 'switch'){
+          let text = document.getElementById('FC').innerHTML;
+          document.getElementById('FC').innerHTML = '<p>フレンドコードを入力するのじゃ！</p><input type="text" name="fc" id="fc" class="input" placeholder="SW-1234-5678-9012">';
+
+          document.getElementById('Link').style.display = "none";//url
+            document.getElementById('Mes').style.display = "none";//message
+            document.getElementById('FC').style.display = "";//frend code
+        }
+        else if(id == 'steam'){
+          let text = document.getElementById('FC').innerHTML;
+          document.getElementById('FC').innerHTML = '<p>フレンドコードを入力するのじゃ！</p><input type="text" name="fc" id="fc" class="input" placeholder="2744290371">';
+
+          document.getElementById('Link').style.display = "none";//url
+            document.getElementById('Mes').style.display = "none";//message
+            document.getElementById('FC').style.display = "";//frend code
+        }
+        else if(id == 'xbox'){
+          let text = document.getElementById('FC').innerHTML;
+          document.getElementById('FC').innerHTML = '<p>フレンドコードを入力するのじゃ！</p><input type="text" name="fc" id="fc" class="input" placeholder="inuinuDog23456">';
+
+          document.getElementById('Link').style.display = "none";//url
+            document.getElementById('Mes').style.display = "none";//message
+            document.getElementById('FC').style.display = "";//frend code
+        }
+        else if(id == 'thanks'){
+          let text = document.getElementById('Mes').innerHTML;
+          document.getElementById('Mes').innerHTML = '<p>送りたいメッセージを入力するのじゃ！</p><textarea type="text" name="mes" id="mes" class="textarea" maxlength="890" placeholder="いつもありがとうございます～🙇"></textarea >';
+
+          document.getElementById('Link').style.display = "none";//url
+            document.getElementById('Mes').style.display = "";//message
+            document.getElementById('FC').style.display = "none";//frend code
+        }else if(id == ''){
+          document.getElementById('Link').style.display = "none";//url
+            document.getElementById('Mes').style.display = "none";//message
+            document.getElementById('FC').style.display = "none";//frend code
+        }
+    }
+
+window.onload = viewChange;
+}
+        </script>
+        
+    <meta property="og:url" content="https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="URLジェネレーター - フォローされると喜びます.com">
+    <meta property="og:description" content="URL作れるで～">
+    <meta property="og:image" content="/fotohap.png">
+        
+    </head>
+
+    <div class="Header">フォローされると喜びます.com</div>
+
+    <div class="dekamoji">URLジェネレーター</div>
+
+    <main>
+      <h1>1.どの形式で利用するか選択して下さい！</h1>
+<form name="form1">
+
+  <label class="selectbox">
+	<select name="whatsns" class="whoisns" id="snsck" onchange="viewChange();" required>
+    <option hidden>選択するのじゃ！</option>
+    <optgroup label="SNS">
+		  <option value="sns">SNS</option>
+		 </optgroup>
+		 <optgroup label="フレンドコード">
+		  <option value="switch">Switch</option>
+		  <option value="steam">Steam</option>
+		  <option value="xbox">Xbox</option>
+		 </optgroup>
+     <optgroup label="Thanks">
+		  <option value="thanks">Thanks</option>
+		 </optgroup>
+
+	</select>
+</label>
+
+</form>
+
+<h1>2.下記の入力欄にメッセージ等を入力して下さい！</h1>
+      <form method="get" name="mainForm" id = "inputto">
+
+          <div id="Link">
+              <p>送りたいURLを入力じゃ～！</p>
+              <input type="text" name="url" id="url" value="" class="input" placeholder="https://misskey.io/@daichimarukana">
+          </div>
+          <div id="Mes">
+            <p>送りたいメッセージを入力するのじゃ！</p>
+            <textarea type="text" name="mes" id="mes" class="textarea" maxlength="890" placeholder="フォローされると喜びます！"></textarea >
+          </div>
+
+          </div>
+          <div id="FC">
+            <p>フレンドコードを入力するのじゃ！</p>
+            <input type="text" name="fc" id="fc" class="input" placeholder="SW-1234-5678-9012">
+          </div>
+        
+        </form>
+
+        <h1>3.生成ボタンを押して下さい！</h1>
+          <input type="button" id="checkButton" class="regist-on" value="生成">
+          <div class="copys" id="copys">
+          </div>
+
+          <div id="result" class="kanse"></div>
+          <a href="https://daichimarukana.com" class="foo">©2022 - 2023 Daichimaru</a>
+          <a href="https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/info/" class="foo">このサイトについて</a>
+          <a href="https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/info/update" class="foo">アップデート履歴</a>
+    </main>
+
+
+</html>
