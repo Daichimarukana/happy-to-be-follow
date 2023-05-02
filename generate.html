@@ -27,32 +27,51 @@
         var str1 = document.getElementById("url").value;
         var str2 = document.getElementById("mes").value;
         var str3 = document.getElementById("fc").value;
+
+        str4 = str2.replace(/\n/, '<br>');
+
+        str5 = str2.replace(/\n/, '&lt;br&gt;');
+
         if(document.getElementById('snsck')){
         id = document.getElementById('snsck').value;
         if(id == 'sns'){
-          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/?c="+str2+"&u="+str1+"";
+          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/?c="+str4+"&u="+str1+"";
+          var vpx = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/?c="+str5+"&u="+str1+"";
         }else if(id == "switch" || id == "steam" || id == "xbox"){
           var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/fc?c="+str3+"&u="+id+"";
+          var vpx = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/fc?c="+str3+"&u="+id+"";
         }else if(id == "thanks"){
-          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/thanks?c="+str2+"";
+          var str = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/thanks?c="+str4+"";
+          var vpx = "https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/thanks?c="+str5+"";
         }
-        document.getElementById("result").innerHTML = str;
-        navigator.clipboard.writeText(str);
-
-        let text = document.getElementById('copys').innerHTML;
-        document.getElementById('copys').innerHTML = 'コピーしました';
 
         if (str === undefined) {
           alert("【1.】を選択して下さい。")
+        }else{
+          document.getElementById('the1').style.display = "none";//frend code
+          document.getElementById('the2').style.display = "none";//frend code
+          document.getElementById('checkButton').style.display = "none";//frend code
+
+          document.getElementById('Link').style.display = "none";//url
+          document.getElementById('Mes').style.display = "none";//message
+          document.getElementById('FC').style.display = "none";//frend code
+
+          document.getElementById('reload').style.display = "";//reload
+
+          document.getElementById("result").innerHTML = vpx;
+
+          navigator.clipboard.writeText(str);
+
+          let text = document.getElementById('copys').innerHTML;
+          document.getElementById('copys').innerHTML = 'コピーしました';
         }
         }
       }}
-
       
 
-
-
 function viewChange(){
+  document.getElementById('reload').style.display = "none";//reload
+
     if(document.getElementById('snsck')){
         id = document.getElementById('snsck').value;
         if(id == 'sns'){
@@ -118,6 +137,7 @@ window.onload = viewChange;
     <div class="dekamoji">URLジェネレーター</div>
 
     <main>
+<div id="the1">
       <h1>1.どの形式で利用するか選択して下さい！</h1>
 <form name="form1">
 
@@ -138,9 +158,10 @@ window.onload = viewChange;
 
 	</select>
 </label>
+</div>
 
 </form>
-
+<div id="the2">
 <h1>2.下記の入力欄にメッセージ等を入力して下さい！</h1>
       <form method="get" name="mainForm" id = "inputto">
 
@@ -160,6 +181,7 @@ window.onload = viewChange;
           </div>
         
         </form>
+</div>
 
         <h1>3.生成ボタンを押して下さい！</h1>
           <input type="button" id="checkButton" class="regist-on" value="生成">
@@ -167,6 +189,9 @@ window.onload = viewChange;
           </div>
 
           <div id="result" class="kanse"></div>
+
+          <input type="button" value="別のURLを生成する" class="regist-on2" onclick="window.location.reload();" id = "reload" />
+
           <a href="https://daichimarukana.com" class="foo">©2022 - 2023 Daichimaru</a>
           <a href="https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/info/" class="foo">このサイトについて</a>
           <a href="https://xn--48ji8b3b1c1dg4uro5h4fq416b.com/info/update" class="foo">アップデート履歴</a>
