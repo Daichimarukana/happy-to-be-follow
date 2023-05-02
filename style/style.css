@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .selectbox {
   position: relative;
 }
@@ -68,7 +69,10 @@
   color: rgb(32,32,32);
   font-size: 1em;
   line-height: 1.5;
+  white-space: nowrap;
   box-shadow:0px 0px 25px rgba(0,0,0,0.05) inset;
+  overflow-x: scroll; 
+  overflow-y : scroll ;
 }
 
 .input::placeholder {
@@ -140,6 +144,28 @@
   cursor: pointer;
   appearance: none;
   }
+  .regist-on2 {
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 7px 25px;
+    border-radius: 7px;
+    border: none;
+    background-color: #4CAFD3;
+    box-shadow: 0 4px 0 #4094b3;
+    position: relative;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 0.8% 4%;
+    cursor: pointer;
+    appearance: none;
+    }
 
 a{
   text-decoration: none;
@@ -295,15 +321,18 @@ body{
 
 .input {
   width: 97%;
+  height: auto;
   padding: 18px 20px;
-  border: none;
   border-radius: 30px;
   background: #eaf6f8;
   font-family: 'Zen Maru Gothic', sans-serif;
   color: rgb(32,32,32);
   font-size: 3.2em;
   line-height: 1.5;
+  white-space: nowrap;
   box-shadow:0px 0px 25px rgba(0,0,0,0.05) inset;
+  overflow-x: scroll; 
+  overflow-y : scroll ;
 }
 
 .input::placeholder {
@@ -375,7 +404,27 @@ body{
   appearance: none;
 }
 
- 
+.regist-on2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  height: 3em;
+  display: block;
+  border: none;
+  background-color: #4CAFD3;
+  box-shadow: 0 4px 0 #4094b3;
+  position: relative;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  appearance: none;
+} 
+
   .Header {
     position: fixed;
     top: 0;
